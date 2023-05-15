@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+</head>
+<body>
+    <h2>Resultado</h2>
+    <p>Se subieron {{ num_archivos }} archivos:</p>
+    <ul>
+        {% for archivo in archivos %}
+            <li>{{ archivo }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
