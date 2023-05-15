@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Subir y modificar archivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Subir y modificar archivos</h1>
+    <form action="cambiar_relacion.py" method="post" enctype="multipart/form-data">
+        <label for="archivos">Selecciona los archivos:</label>
+        <input type="file" id="archivos" name="archivos[]" multiple>
+        <br>
+        <label for="relacion_actual">Relación actual:</label>
+        <input type="text" id="relacion_actual" name="relacion_actual" value="AND TRA.COD_ESTADO_FIRMA = 1">
+        <br>
+        <label for="relacion_nueva">Relación nueva:</label>
+        <input type="text" id="relacion_nueva" name="relacion_nueva" value="AND TRA.COD_ESTADO_FIRMA IN (1,2)">
+        <br>
+        <input type="submit" value="Subir y modificar archivos">
+    </form>
+</body>
+</html>
